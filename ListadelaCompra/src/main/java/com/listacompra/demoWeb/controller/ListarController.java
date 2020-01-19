@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.listacompra.demoWeb.model.Producto;
 import com.listacompra.demoWeb.repo.IListacomprarepo;
@@ -19,7 +19,7 @@ public class ListarController {
 
 
 	@GetMapping("/listar")
-	public String greeting(Model model) {
+	public String listar(Model model) {
 	//logica
 
      model.addAttribute("personas", repo.findAll());
@@ -43,6 +43,21 @@ public class ListarController {
 }
 return "listar";
 }
+	
+//	Guarda los productos marcados
+	@PostMapping("/guardalista")
+	public String listarpost(Model model) {
+	
+		
+		
+	
+	
+	return "listar";
+	}
+	
+	
+	
+	
 	
 	@GetMapping("/comprar")
 	public String compra(Model model) {
