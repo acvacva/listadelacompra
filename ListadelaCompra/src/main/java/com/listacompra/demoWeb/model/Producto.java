@@ -8,7 +8,6 @@ import javax.persistence.Id;
 public class Producto {
 
     @Id
-
 	private int id_producto;
     
     @Column(name="nombre_producto",length=150)
@@ -17,30 +16,43 @@ public class Producto {
 	@Column(name="descripcion",length=200)
     private String descripcion;
     
-  @Override
-	public String toString() {
-		return "Producto [id_producto=" + id_producto + ", nombre_producto=" + nombre_producto + ", descripcion="
-				+ descripcion + ", comprar=" + comprar + ", tipoproducto=" + tipoproducto + "]";
-	}
+
+	public Integer getIdTipoproducto() {
+	return idTipoproducto;
+}
+
+
+public void setIdTipoproducto(Integer idTipoproducto) {
+	this.idTipoproducto = idTipoproducto;
+}
 
 
 	@Column(name="comprar")
     private Boolean comprar;
     
-    @Column(name="tipoproducto",length=200)
-    private String tipoproducto;
+    @Column(name="idTipoproducto")
+    private int idTipoproducto;
     
-    public String getTipoproducto() {
+
+	@Override
+	public String toString() {
+		return "Producto [id_producto=" + id_producto + ", nombre_producto=" + nombre_producto + ", descripcion="
+				+ descripcion + ", comprar=" + comprar + ", idTipoproducto=" + idTipoproducto + "]";
+	}
+
+
+	/*   public String getTipoproducto() {
 		return tipoproducto;
 	}
 
 	public void setTipoproducto(String tipoproducto) {
 		this.tipoproducto = tipoproducto;
 	}
-
+*/
 	public int getId_producto() {
 		return id_producto;
 	}
+
 
 	public void setId_producto(int id_producto) {
 		this.id_producto = id_producto;

@@ -17,7 +17,6 @@ public class ListarController {
 	@Autowired
 	private IListacomprarepo repo;
 
-
 	@GetMapping("/listar")
 	public String greeting(Model model) {
 	//logica
@@ -65,7 +64,7 @@ return "nocomprar";
      articulo.setDescripcion("FRUTAS FRESCAS");
      articulo.setComprar(true);
      articulo.setId_producto(8);
-     articulo.setTipoproducto("FRUTAS");
+     articulo.setIdTipoproducto(6);
      repo.save(articulo);
      model.addAttribute("personas", repo.findAll());
 return "listar";
@@ -73,7 +72,7 @@ return "listar";
 	
 @GetMapping("/lacteo")
 	public String buscar(Model model) {
-     model.addAttribute("personas", repo.findByTipoproducto("LACTEO"));
+     model.addAttribute("personas", repo.findByIdTipoproducto(1));
 
 return "listar";
 }
