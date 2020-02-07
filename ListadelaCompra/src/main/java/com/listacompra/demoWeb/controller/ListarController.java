@@ -66,6 +66,29 @@ return "nocomprar";
      articulo.setId_producto(8);
      articulo.setIdTipoproducto(6);
      repo.save(articulo);
+     
+     Producto articulo1= new Producto();
+     articulo1.setNombre_producto("QUESO CREMA CAMBIADO");
+     articulo1.setDescripcion("QUESO PARA UNTAR LA VACA QUE RIE");
+     articulo1.setComprar(true);
+     articulo1.setId_producto(1);
+     articulo1.setIdTipoproducto(1);
+     repo.save(articulo1);
+     Producto articulo2= new Producto();
+     articulo2.setNombre_producto("MANDARINA");
+     articulo2.setDescripcion("FRUTAS FRESCAS");
+     articulo2.setComprar(true);
+     articulo2.setId_producto(9);
+     articulo2.setIdTipoproducto(6);
+     repo.save(articulo2);
+     Producto articulo3= new Producto();
+     articulo3.setNombre_producto("PICADILLO CURADO");
+     articulo3.setDescripcion("CARNE PICADA PARA HACER HAMBURGUESAS");
+     articulo3.setComprar(true);
+     articulo3.setId_producto(10);
+     articulo3.setIdTipoproducto(3);
+     repo.save(articulo3);
+     
      model.addAttribute("personas", repo.findAll());
 return "listar";
 }

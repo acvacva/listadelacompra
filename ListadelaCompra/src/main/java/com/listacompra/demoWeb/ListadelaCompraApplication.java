@@ -9,6 +9,8 @@ public class ListadelaCompraApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ListadelaCompraApplication.class, args);
 		System.out.println("I am working now");
+	
+
 	}
 
 }
